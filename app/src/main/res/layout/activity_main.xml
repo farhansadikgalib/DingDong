@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F7F5F0"
-    android:clickable="true"
-    android:orientation="vertical"
-    android:gravity="center"
-    >
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/splash_bell"
+    tools:context=".MainActivity">
 
-    <ImageView
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageV"
-        android:layout_marginBottom="50dp"/>
+        android:layout_centerHorizontal="true"
+        android:text="0 %"
+        android:textColor="#F3EBF0"
+        android:textSize="20dp"
+        android:id="@+id/textView"
+        android:layout_above="@id/progressbar"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <ProgressBar
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/round"
-        android:text="DingDong Now" />
+        android:id="@+id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"/>
 
-</LinearLayout>
+</RelativeLayout>
